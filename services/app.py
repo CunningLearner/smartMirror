@@ -3,7 +3,7 @@ from darksky import forecast
 INDIA = 28.6139, 77.2090
 from flask_socketio import SocketIO, send, emit
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='../templates')
 app.config['SECRET_KEY'] = 'secret!'
 socketio = SocketIO(app)
 
